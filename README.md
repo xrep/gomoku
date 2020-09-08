@@ -1,4 +1,5 @@
-# Tic Tac Toe by Alex
+
+# Gomoku by Alex
 
 ## TODO
 - other player disconnected
