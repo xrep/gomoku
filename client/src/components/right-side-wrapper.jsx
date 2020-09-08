@@ -8,29 +8,28 @@ import StatusWrapper from "./status-wrapper";
 
 const RightSideWrapperSC = styled.div`
   .information {
-    margin: 90px 100px;
-  }
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
 
-  .first-player {
-    margin-bottom: 30px;
-  }
+    .first-player {
+      margin-right: 40px;
 
-  .first-player-img {
-    width: 125px;
-    height: 175px;
-    display: block;
-    margin: auto;
-  }
+      img {
+        max-height: 125px;
+        display: block;
+      }
+    }
 
-  .second-player {
-    margin-top: 30px;
-  }
+    .second-player {
+      margin-left: 40px;
 
-  .second-player-img {
-    width: 150px;
-    height: 200px;
-    display: block;
-    margin: auto;
+      img {
+        max-height: 150px;
+        display: block;
+      }
+    }
   }
 
   h1 {
@@ -51,28 +50,28 @@ export default () => {
         <div className="first-player">
           <h1>
             {playerUsername
-              ? `${playerUsername}${mySymbol ? ' - ' + mySymbol : ""}`
+              ? `${playerUsername}${mySymbol ? " - " + mySymbol : ""}`
               : ""}
           </h1>
           <img
             src={FirstPlayerImg}
             alt="First Player"
-            className="first-player-img"
           />
         </div>
-        <StatusWrapper />
+        {/*<StatusWrapper />*/}
+        <h1>VS</h1>
         <div className="second-player">
           <h1>
             {opponentUsername
-              ? `${opponentUsername} ${opSymbol ? ' - ' + opSymbol : ""}`
+              ? `${opponentUsername} ${opSymbol ? " - " + opSymbol : ""}`
               : ""}
           </h1>
+          <img
+            src={SecondPlayerImg}
+            alt="Second Player"
+          />
         </div>
-        <img
-          src={SecondPlayerImg}
-          alt="Second Player"
-          className="second-player-img"
-        />
+     
       </div>
     </RightSideWrapperSC>
   );

@@ -1,4 +1,8 @@
-.app-wrapper {
+body {
   background-color: lightgreen;
-  display: flex;
+}
+
+.app-wrapper {
+  max-width: 896px;
+  margin: 0 auto;
 }

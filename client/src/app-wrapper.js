@@ -8,8 +8,8 @@ export default () => {
   return (
     <div className="app-wrapper">
       <ModalWrapper />
-      <LeftSideWrapper />
       <RightSideWrapper />
+      <LeftSideWrapper />
     </div>
   );
 };
